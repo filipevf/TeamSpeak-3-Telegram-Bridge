@@ -114,7 +114,7 @@ void Communicator::readThread()
             char* msg = (char*) message["text"].toString().toLocal8Bit().constData();
             if (!running) break;
             std::ostringstream text;
-            text << "via TelegramBridge:\n" << msg;
+            text msg;
             ID = -1;
             if (ts3Functions->requestClientIDs((*messages)[msg_id].second, (*messages)[msg_id].first.c_str(), NULL) == ERROR_ok) {
                 std::unique_lock<std::mutex> lk(IDlockMutex);
